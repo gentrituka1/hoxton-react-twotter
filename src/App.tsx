@@ -1,6 +1,12 @@
 import "./App.css";
 import { Link } from "react-router-dom";
-import { FaBeer, BiHomeCircle } from "react-icons/fa";
+import { FaBeer } from "react-icons/fa";
+import { BiHomeCircle } from "react-icons/bi";
+import { RiFileList2Line, RiHashtag } from "react-icons/ri";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsBookmark } from "react-icons/bs";
+import { CgMoreO, CgProfile } from "react-icons/cg";
 
 function App() {
   return (
@@ -14,7 +20,7 @@ function App() {
           </li>
           <li>
             <div className="left-menu__icons">
-              <span>
+              <span className="icons">
                 <BiHomeCircle />
               </span>
               <h2>Home</h2>
@@ -22,49 +28,63 @@ function App() {
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="Explore" />
+              <span className="icons">
+                <RiHashtag />
+              </span>
               <h2>Explore</h2>
             </div>
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="Notifications" />
+              <span className="icons">
+                <IoIosNotificationsOutline />
+              </span>
               <h2>Notifications</h2>
             </div>
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="Messages" />
+              <span className="icons">
+                <AiOutlineMail />
+              </span>
               <h2>Messages</h2>
             </div>
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="Bookmarks" />
+              <span className="icons">
+                <BsBookmark />
+              </span>
               <h2>Bookmarks</h2>
             </div>
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="Lists" />
+              <span className="icons">
+                <RiFileList2Line />
+              </span>
               <h2>Lists</h2>
             </div>
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="Profile" />
+              <span className="icons">
+                <CgProfile />
+              </span>
               <h2>Profile</h2>
             </div>
           </li>
           <li>
             <div className="left-menu__icons">
-              <img src="/" alt="More" />
+              <span className="icons">
+                <CgMoreO />
+              </span>
               <h2>More</h2>
             </div>
           </li>
           <li>
-            <div className="left-menu__icons">
-              <button>Tweet</button>
+            <div>
+              <button className="btn-tweet">Tweet</button>
             </div>
           </li>
         </ul>
