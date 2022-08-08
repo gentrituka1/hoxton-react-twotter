@@ -1,5 +1,6 @@
 import './App.css'
 import { Link } from 'react-router-dom'
+import {FaBeer, BiHomeCircle} from 'react-icons/fa'
 
 function App() {
 
@@ -13,39 +14,57 @@ function App() {
                 </Link>
               </li>
               <li>
-                <img src="/" alt="home" />
-                <h2>Home</h2>
+                <div className='left-menu__icons'>
+                  <span><BiHomeCircle /></span>
+                  <h2>Home</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="Explore" />
-                <h2>Explore</h2>
+                <div className='left-menu__icons'>
+                  <img src="/" alt="Explore" />
+                  <h2>Explore</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="Notifications" />
-                <h2>Notifications</h2>
+                <div className='left-menu__icons'>
+                    <img src="/" alt="Notifications" />
+                    <h2>Notifications</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="Messages" />
-                <h2>Messages</h2>
+                <div className='left-menu__icons'>
+                    <img src="/" alt="Messages" />
+                    <h2>Messages</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="Bookmarks" />
-                <h2>Bookmarks</h2>
+                <div className='left-menu__icons'>
+                  <img src="/" alt="Bookmarks" />
+                  <h2>Bookmarks</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="Lists" />
-                <h2>Lists</h2>
+                <div className='left-menu__icons'>
+                  <img src="/" alt="Lists" />
+                  <h2>Lists</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="Profile" />
-                <h2>Profile</h2>
+                <div className='left-menu__icons'>
+                  <img src="/" alt="Profile" />
+                  <h2>Profile</h2>
+                </div>
               </li>
               <li>
-                <img src="/" alt="More" />
-                <h2>More</h2>
+                <div className='left-menu__icons'>
+                  <img src="/" alt="More" />
+                  <h2>More</h2>
+                </div>
               </li>
               <li>
-                <button>Tweet</button>
+                <div className='left-menu__icons'>
+                  <button>Tweet</button>
+                </div>
               </li>
           </ul>
       </section>
