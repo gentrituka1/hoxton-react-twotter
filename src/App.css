@@ -5,7 +5,7 @@
 }
 
 .App{
-  padding: 0px 300px;
+  padding: 10px 300px;
   display: grid;
   grid-template: 
   "left-menu main-menu right-menu" 1fr /
@@ -24,21 +24,12 @@
   display: grid;
   grid-template-columns: auto 1fr;
 }
-.gif{
-  display: none;
-}
 .svg{
-  padding-top: 20px;
-  width: 70px;
+  width: 40px;
 }
-@media (any-hover:hover){
-  .svg:hover{
-    display: none;
-  }
-  .gif{
-    padding-top: 20px;
-    width: 70px;
-  }
+.svg:hover{
+  background-color: rgba(173, 216, 230, 0.397);
+  clip-path: circle(closest-side);
 }
 
 /* main section */

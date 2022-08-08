@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import { Link } from 'react-router-dom'
 
 function App() {
 
@@ -9,10 +8,9 @@ function App() {
      <section className="left-menu">
           <ul className='left-menu__list'>
               <li>
-                <img className='gif' src="../twittergif.gif" alt="home" onMouseOver={(event) => {
-                    event.target.
-                }}/>
-                <img className='svg' src="../twittersvg.svg" alt="home"/>
+                <Link to={'/home'}>
+                  <img className='svg' src="../twittersvg.svg" alt="home"/>
+                </Link>
               </li>
               <li>
                 <img src="/" alt="home" />
