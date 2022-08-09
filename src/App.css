@@ -6,17 +6,19 @@
 
 .App {
   height: 100vh;
-  padding: 10px 300px;
+  padding: 0px 300px;
   display: grid;
+  border-top: 1px solid grey;
   grid-template:
     "left-menu main-menu right-menu" 1fr /
-    300px 1fr 300px;
+    300px 1fr 350px;
 }
 
 /* left-menu section */
 
 .left-menu {
   grid-area: left-menu;
+  padding: 10px;
 }
 
 .left-menu__list {
@@ -70,9 +72,70 @@
 .main-menu {
   grid-area: main-menu;
   background-color: aqua;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  padding: 15px;
 }
+
+
+/* right-menu section */
 
 .right-menu {
   grid-area: right-menu;
-  background-color: blanchedalmond;
+  padding: 5px 20px;
+}
+
+.search-form{
+  border-radius: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  padding: 10px;
+  background-color: #eff3f4;
+  gap: 20px;
+}
+.search-form input{
+  width: 100%;
+  padding: 5px;
+  border: unset;
+  background-color: #eff3f4;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+  outline: none;
+
+}
+.search-form input::placeholder{
+  color: #657581;
+}
+
+.search-form input:focus::placeholder {
+  color: transparent;
+}
+
+.search-form-icon{
+  font-size: 1.4rem;
+  color: #657581;
+}
+
+
+.right-menu__trends{
+  display: grid;
+  gap: 30px;
+  margin: 20px 5px;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #f7f9f9;
+}
+.right-menu__trends-list{
+  list-style: none;
+  
+  display: grid;
+}
+.right-menu__trends-list li{
+  padding: 10px;
+}
+.right-menu__trends-list li:hover{
+  background-color: #0f16161a;
+  cursor: pointer;
 }
