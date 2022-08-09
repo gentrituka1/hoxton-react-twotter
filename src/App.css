@@ -41,7 +41,7 @@
   place-items: center;
 }
 .icons {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .btn-tweet {
   all: unset;
@@ -52,6 +52,7 @@
   border-radius: 50px;
   background-color: #1d9bf0;
   color: white;
+  cursor: pointer;
 }
 
 /* main section */
