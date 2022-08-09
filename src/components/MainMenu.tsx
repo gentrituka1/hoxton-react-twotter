@@ -6,7 +6,13 @@ export function MainMenu() {
             <main className="main-menu">
                 <header>
                     <h2>Home</h2>
-                    <div>What's happening?</div>
+                    <div>
+                        <form>
+                            <img />
+                            <input type="text" placeholder="What's happening?" />
+                        </form>
+                        <button>Tweet</button>
+                    </div>
                 </header>
                 <SingleTweetCard />
             </main>

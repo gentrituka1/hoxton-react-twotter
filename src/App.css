@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --grey: #eff3f4;
+}
+
 .App {
   height: 100vh;
   padding: 0px 300px;
   display: grid;
-  border-top: 1px solid grey;
+  border-top: 1px solid var(--grey);
   grid-template:
     "left-menu main-menu right-menu" 1fr /
     300px 1fr 350px;
@@ -48,7 +52,7 @@
 }
 .btn-tweet {
   all: unset;
-  border: 1px solid grey;
+  border: 1px solid var(--grey);
   text-align: center;
   width: 200px;
   padding: 15px;
@@ -61,23 +65,50 @@
   text-decoration: none;
   color: black;
 }
+.left-menu__icons{
+  padding: 10px;
+}
 .left-menu__icons:hover{
   background-color: rgb(192, 189, 189);
   border-radius: 30px;
-  padding: 10px;
 }
 
 /* main section */
 
 .main-menu {
   grid-area: main-menu;
-  background-color: aqua;
-  border-right: 1px solid grey;
-  border-left: 1px solid grey;
-  padding: 15px;
+  border-right: 1px solid var(--grey);
+  border-left: 1px solid var(--grey);
 }
 
 
+
+.single-tweet-item{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  padding: 10px 15px;
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
+}
+
+.profile-image{
+  border-radius: 50%;
+}
+.text-image{
+  border-radius: 20px;
+}
+
+.single-tweet-card__text{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.single-tweet-card__name__and__text{
+  display: grid;
+  gap: 10px;
+}
 /* right-menu section */
 
 .right-menu {

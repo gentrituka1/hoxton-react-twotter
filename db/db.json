@@ -9,16 +9,6 @@
         "profileImage": "https://pbs.twimg.com/profile_images/1490744361784692737/Gt1H_KTI_400x400.jpg"
       }, 
       "image": "https://pbs.twimg.com/media/FZuF8niXEAALRxu?format=jpg&name=medium"
-    },
-    {
-      "id": 2,
-      "text": "I don't like pie.",
-      "user": {
-        "name": "James Doe",
-        "username": "jmsdoe",
-        "profileImage": "http://lorempixel.com/100/100/people/2"
-      },
-      "image": "http://lorempixel.com/400/200/food"
     }
   ],
 
