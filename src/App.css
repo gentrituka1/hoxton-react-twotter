@@ -132,6 +132,7 @@
   font-size: 1.05rem;
   background-color: #8ecdf7;
   border-radius: 30px;
+  cursor: pointer;
 }
 .tweet-form {
   display: grid;
@@ -142,6 +143,8 @@
 .tweet-form input {
   height: 100%;
   border: unset;
+  outline: none;
+  font-size: 1.3rem;
 }
 .tweet-form input::placeholder {
   font-size: 1.3rem;
@@ -151,6 +154,10 @@
   border-radius: 50%;
 }
 
+.tweet-button-btn-active{
+  color: white;
+  background-color: #1d9bf0;
+}
 /* right-menu section */
 
 .right-menu {

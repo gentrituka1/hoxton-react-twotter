@@ -12,7 +12,7 @@ export function LeftMenu () {
         <ul className="left-menu__list">
           <li>
             <Link to={"/home"}>
-              <img className="svg" src="../twittersvg.svg" alt="home" />
+              <img className="svg" src="images/twittersvg.svg" alt="home" />
             </Link>
           </li>
           <li>

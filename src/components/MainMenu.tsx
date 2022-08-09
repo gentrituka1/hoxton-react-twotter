@@ -1,7 +1,15 @@
 import { TheTweet } from "../pages/TheTweet";
-import { SingleTweetCard } from "./SingleTweetCard";
+import { SingleTweetCard, Tweet } from "./SingleTweetCard";
 
-export function MainMenu() {
+type Props = {
+    tweets: Tweet[];
+    setTweets: (tweets: Tweet[]) => void;
+}
+
+export function MainMenu({tweets, setTweets}: Props) {
+
+
+
   return (
     <>
       <main className="main-menu">
@@ -26,13 +34,21 @@ export function MainMenu() {
                         },
                         image: ""
                     })
+                }).then(res => res.json())
+                .then(tweet => {
+                    setTweets([...tweets, tweet])
                 })
+
             }}>
               <img src="/images/gentrit.jpg" width={50}/>
-              <input type="text" name="tweet" placeholder="What's happening?" />
+              <input type="text" name="tweet" placeholder="What's happening?" onChange={() => {
+                    let tweetButton = document.querySelector(".tweet-button-btn");
+                    tweetButton?.classList.remove("tweet-button-btn");
+                    tweetButton?.classList.add("tweet-button-btn-active");
+              }}/>
             </form>
             <div className="tweet-button">
-                <button>Tweet</button>
+                <button className="tweet-button-btn">Tweet</button>
             </div>
           </div>
         </header>
