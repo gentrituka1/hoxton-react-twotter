@@ -61,14 +61,14 @@
   color: white;
   cursor: pointer;
 }
-.icons-text{
+.icons-text {
   text-decoration: none;
   color: black;
 }
-.left-menu__icons{
+.left-menu__icons {
   padding: 10px;
 }
-.left-menu__icons:hover{
+.left-menu__icons:hover {
   background-color: rgb(192, 189, 189);
   border-radius: 30px;
 }
@@ -81,9 +81,7 @@
   border-left: 1px solid var(--grey);
 }
 
-
-
-.single-tweet-item{
+.single-tweet-item {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
@@ -92,23 +90,67 @@
   border-bottom: 1px solid var(--grey);
 }
 
-.profile-image{
+.profile-image {
   border-radius: 50%;
 }
-.text-image{
+.text-image {
   border-radius: 20px;
 }
 
-.single-tweet-card__text{
+.single-tweet-card__text {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
 }
 
-.single-tweet-card__name__and__text{
+.single-tweet-card__name__and__text {
   display: grid;
   gap: 10px;
 }
+
+.tweet-header {
+  display: grid;
+  gap: 20px;
+  padding: 15px;
+}
+.tweet-post {
+  display: grid;
+  gap: 20px;
+}
+
+.tweet-button {
+  display: grid;
+  place-content: end;
+}
+
+.tweet-post button {
+  display: grid;
+  padding: 10px 20px;
+  border: unset;
+  color: white;
+  font-weight: bold;
+  font-size: 1.05rem;
+  background-color: #8ecdf7;
+  border-radius: 30px;
+}
+.tweet-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.tweet-form input {
+  height: 100%;
+  border: unset;
+}
+.tweet-form input::placeholder {
+  font-size: 1.3rem;
+}
+
+.tweet-form img {
+  border-radius: 50%;
+}
+
 /* right-menu section */
 
 .right-menu {
@@ -116,7 +158,7 @@
   padding: 5px 20px;
 }
 
-.search-form{
+.search-form {
   border-radius: 30px;
   display: grid;
   align-items: center;
@@ -125,7 +167,7 @@
   background-color: #eff3f4;
   gap: 20px;
 }
-.search-form input{
+.search-form input {
   width: 100%;
   padding: 5px;
   border: unset;
@@ -134,9 +176,8 @@
   font-weight: bold;
   color: black;
   outline: none;
-
 }
-.search-form input::placeholder{
+.search-form input::placeholder {
   color: #657581;
 }
 
@@ -144,13 +185,12 @@
   color: transparent;
 }
 
-.search-form-icon{
+.search-form-icon {
   font-size: 1.4rem;
   color: #657581;
 }
 
-
-.right-menu__trends{
+.right-menu__trends {
   display: grid;
   gap: 30px;
   margin: 20px 5px;
@@ -158,15 +198,15 @@
   border-radius: 30px;
   background-color: #f7f9f9;
 }
-.right-menu__trends-list{
+.right-menu__trends-list {
   list-style: none;
-  
+
   display: grid;
 }
-.right-menu__trends-list li{
+.right-menu__trends-list li {
   padding: 10px;
 }
-.right-menu__trends-list li:hover{
+.right-menu__trends-list li:hover {
   background-color: #0f16161a;
   cursor: pointer;
 }
