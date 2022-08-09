@@ -1,19 +1,17 @@
 {
-  "posts": [
+
+
+
+  "trends": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Albania",
+      "tweets": 22.2,
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Kosova",
+      "tweets": 13.1,
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

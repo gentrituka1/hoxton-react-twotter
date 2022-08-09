@@ -7,8 +7,25 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsBookmark } from "react-icons/bs";
 import { CgMoreO, CgProfile } from "react-icons/cg";
+import { useEffect, useState } from "react";
+
+export type Trends = {
+  name: string;
+  tweets: number;
+  id: number;
+}
 
 function App() {
+
+  const [trends, setTrends] = useState<Trends[]>([]); 
+
+  useEffect(() => {
+    fetch('http://localhost:4000/trends')
+    .then(res => res.json())
+    .then(datafromServer => setTrends(datafromServer))
+  }, [])
+
+
   return (
     <div className="App">
       <section className="left-menu">
@@ -93,7 +110,19 @@ function App() {
         <h2>Main Content</h2>
       </main>
       <section className="right-menu">
-        <h2>Right Menu</h2>
+        <label>
+          <input type="text" placeholder="Search Twitter" />
+        </label>
+        <div className="right-menu__trends">
+          <h2>Trends for you</h2>
+          <ul className="right-menu__trends-list">
+            {trends.map(trend => <li>
+              <p>{trend.name}</p>
+              <p>{trend.tweets}K</p>
+            </li>)}
+
+            </ul>
+          </div>
       </section>
     </div>
   );
