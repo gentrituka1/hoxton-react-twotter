@@ -39,6 +39,7 @@
   grid-template-columns: auto 1fr;
   gap: 10px;
   place-items: center;
+  cursor: pointer;
 }
 .icons {
   font-size: 1.8rem;
@@ -53,6 +54,15 @@
   background-color: #1d9bf0;
   color: white;
   cursor: pointer;
+}
+.icons-text{
+  text-decoration: none;
+  color: black;
+}
+.left-menu__icons:hover{
+  background-color: rgb(192, 189, 189);
+  border-radius: 30px;
+  padding: 10px;
 }
 
 /* main section */
