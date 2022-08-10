@@ -25,7 +25,6 @@ export function MainMenu({tweets, setTweets}: Props) {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        id: 1,
                         text: event.target.tweet.value,
                         user: {
                             name: "Gentrit",
@@ -39,17 +38,19 @@ export function MainMenu({tweets, setTweets}: Props) {
                     setTweets([...tweets, tweet])
                 })
 
-            }}>
+                event.target.tweet.value = "";
+                location.reload();
+            }}
+            >
               <img src="/images/gentrit.jpg" width={50}/>
-              <input type="text" name="tweet" placeholder="What's happening?" onChange={() => {
-                    let tweetButton = document.querySelector(".tweet-button-btn");
-                    tweetButton?.classList.remove("tweet-button-btn");
-                    tweetButton?.classList.add("tweet-button-btn-active");
-              }}/>
-            </form>
-            <div className="tweet-button">
-                <button className="tweet-button-btn">Tweet</button>
+              <input type="text" name="tweet" placeholder="What's happening?"/>
+              <div className="tweet-button">
+                <button className="tweet-button-btn" onClick={() => {
+                    
+                }}>Tweet</button>
             </div>
+            </form>
+            
           </div>
         </header>
         <SingleTweetCard />

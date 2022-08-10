@@ -11,16 +11,22 @@ export function SingleTweet({tweet}: Props){
             <div className="single-tweet-card__name__and__text">
                 <div className="single-tweet-card__text">
                     <h2>{tweet.user.name}</h2>
-                    <h3>@{tweet.user.username}</h3>
+                    <span>@{tweet.user.username}</span>
+                    <div className="single-tweet-card__icons">
+                        <button onClick={() => {
+                            fetch(`http://localhost:4000/tweets/${tweet.id}`, {
+                                method: 'DELETE'
+                            }).then(res => res.json())
+                            .then(() => {
+                                location.reload();
+                            })
+                        }}>❌</button>
+                    </div>
                 </div>
                 <p>{tweet.text}</p>
                 <img className="text-image" src={tweet.image} width={600} />
             </div>
-            <div className="single-tweet-card__icons">
-                <div className="card-icons">
-                    
-                </div>
-            </div>
+            
         </div>
     )
 }

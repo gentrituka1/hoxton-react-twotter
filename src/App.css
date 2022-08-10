@@ -99,13 +99,29 @@
 
 .single-tweet-card__text {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto 1fr;
   align-items: center;
+  gap: 5px;
+  font-weight: bold;
 }
 
 .single-tweet-card__name__and__text {
   display: grid;
   gap: 10px;
+}
+
+.single-tweet-card__icons{
+  display: grid;
+  justify-content: end;
+}
+
+.single-tweet-card__icons button{
+  all: unset;
+  display: grid;
+  cursor: pointer;
+}
+.single-tweet-card__icons button:hover{
+  transform: scale(1.2);
 }
 
 .tweet-header {
@@ -120,7 +136,7 @@
 
 .tweet-button {
   display: grid;
-  place-content: end;
+  justify-items: end;
 }
 
 .tweet-post button {
@@ -154,10 +170,7 @@
   border-radius: 50%;
 }
 
-.tweet-button-btn-active{
-  color: white;
-  background-color: #1d9bf0;
-}
+
 /* right-menu section */
 
 .right-menu {
