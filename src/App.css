@@ -170,6 +170,22 @@
   border-radius: 50%;
 }
 
+/* the tweet main section */
+
+.the-tweet-header{
+  display: grid; 
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+}
+.the-tweet-header h2{
+  font-size: 1.3rem;
+}
+.arrow-left{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
 /* right-menu section */
 

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Tweet } from "../App";
 import { LeftMenu } from "../components/LeftMenu";
 import { MainMenu } from "../components/MainMenu";
 import { RightMenu } from "../components/RightMenu";
@@ -9,21 +10,19 @@ export type Trends = {
     id: number;
   }
 
-export function Home(){
+  type Props = {
+    setTweets: (tweets: Tweet[]) => void
+  }
 
-    const [trends, setTrends] = useState<Trends[]>([]); 
+export function Home({setTweets}: Props){
 
-  useEffect(() => {
-    fetch('http://localhost:4000/trends')
-    .then(res => res.json())
-    .then(datafromServer => setTrends(datafromServer))
-  }, [])
+    
   
     return (
         <>
             <LeftMenu />
-            <MainMenu />
-            <RightMenu trends={trends} />
+            <MainMenu tweets={[]} setTweets={setTweets} />
+            <RightMenu />
         </>
     )
 }

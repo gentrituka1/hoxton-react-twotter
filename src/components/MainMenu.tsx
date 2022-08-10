@@ -1,5 +1,7 @@
-import { TheTweet } from "../pages/TheTweet";
-import { SingleTweetCard, Tweet } from "./SingleTweetCard";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Tweet } from "../App";
+import { SingleTweetCard } from "./SingleTweetCard";
 
 type Props = {
   tweets: Tweet[];
@@ -7,6 +9,7 @@ type Props = {
 };
 
 export function MainMenu({ tweets, setTweets }: Props) {
+
   return (
     <>
       <main className="main-menu">
@@ -53,7 +56,9 @@ export function MainMenu({ tweets, setTweets }: Props) {
             </form>
           </div>
         </header>
-        <SingleTweetCard />
+        <Link to="/tweet">
+          <SingleTweetCard tweets={tweets} setTweets={setTweets} />
+        </Link>
       </main>
     </>
   );

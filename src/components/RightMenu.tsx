@@ -1,14 +1,24 @@
 import {Trends} from '../pages/Home'
 import { TrendsCard } from './TrendsCard'
 import {FiSearch} from 'react-icons/fi'
-import { SingleTweetCard, Tweet } from './SingleTweetCard'
+import { SingleTweetCard } from './SingleTweetCard'
+import { Tweet } from '../App'
+import { useEffect, useState } from 'react'
 
 export type Props = {
     trends: Trends[]
     tweets: Tweet[]
 }
 
-export function RightMenu({trends, tweets}: Props){
+export function RightMenu(){
+
+    const [trends, setTrends] = useState<Trends[]>([]); 
+
+  useEffect(() => {
+    fetch('http://localhost:4000/trends')
+    .then(res => res.json())
+    .then(datafromServer => setTrends(datafromServer))
+  }, [])
 
     return (
         <section className="right-menu">

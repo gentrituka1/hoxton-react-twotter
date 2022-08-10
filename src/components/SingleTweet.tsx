@@ -1,4 +1,5 @@
-import { Tweet } from "./SingleTweetCard";
+import { Tweet } from "../App";
+
 
 type Props = {
     tweet: Tweet;
@@ -30,7 +31,6 @@ export function SingleTweet({tweet}: Props){
                 <p>{tweet.text}</p>
                 <img className="text-image" src={tweet.image} width={600} />
             </div>
-            
         </div>
     )
 }

@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react"
+import { Tweet } from "../App";
 import { SingleTweet } from "./SingleTweet";
 
-export type Tweet = {
-    id: number;
-    text: string;
-    user: {
-        name: string;
-        username: string;
-        profileImage: string;
-    }
-    image: string;
-    
+type Props = {
+    tweets: Tweet[];
+    setTweets: (tweets: Tweet[]) => void;
 }
 
-export function SingleTweetCard(){
 
-    const [tweets, setTweets] = useState<Tweet[]>([])
+export function SingleTweetCard({ tweets, setTweets }: Props) {
 
     useEffect(() => {
         fetch('http://localhost:4000/tweets')
