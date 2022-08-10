@@ -14,12 +14,16 @@ export function SingleTweet({tweet}: Props){
                     <span>@{tweet.user.username}</span>
                     <div className="single-tweet-card__icons">
                         <button onClick={() => {
+                            if(tweet.user.name === "Gentrit"){
                             fetch(`http://localhost:4000/tweets/${tweet.id}`, {
                                 method: 'DELETE'
                             }).then(res => res.json())
                             .then(() => {
                                 location.reload();
                             })
+                        } else {
+                            alert("You can't delete this tweet");
+                        }
                         }}>❌</button>
                     </div>
                 </div>
